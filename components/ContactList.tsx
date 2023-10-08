@@ -31,7 +31,6 @@ const List = styled.li`
       }
       p {
         margin: 0;
-        text-transform: capitalize;
         font-size: .95em;
       }
       .number{

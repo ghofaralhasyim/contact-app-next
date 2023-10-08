@@ -29,8 +29,14 @@ const ContactListContainer = styled.div`
     height: ${MIN_HEIGHT_CONTAINER}px;
     overflow: auto;
     .search-keyword {
-        margin: 0 0 12px 0;
         color: #8f8f8f;
+        margin: 0 0 12px 0;
+        p {
+            margin: 0;
+        }
+        span {
+            font-size: 80%;
+        }
     }
 `
 
@@ -136,8 +142,8 @@ const HomePage: React.FC = () => {
             orderBy: [{ first_name: 'asc' }],
             where: {
                     "_or": [
-                        { "first_name": { "_like": `%${keyword.toLowerCase()}%` } },
-                        { "last_name": { "_like": `%${keyword.toLowerCase()}%` } }
+                        { "first_name": { "_like": `%${keyword}%` } },
+                        { "last_name": { "_like": `%${keyword}%` } }
                     ]
                 },
             });
@@ -172,7 +178,13 @@ const HomePage: React.FC = () => {
                     <SearchBar onSearch={handleSearch} search={ searchState } />
                     <AddContact isShow={ isModalAddShow } closeModal={() => setModalAddShow(false)} onAddContact={() => handleRefetchAllData() }/>
                     <ContactListContainer ref={contactListContainer}>
-                            {searchState.state && (<p className="search-keyword">Search result for `{searchState.keyword}`</p>)}
+                            {
+                                searchState.state &&
+                                (<div className="search-keyword">
+                                    <p>Search result for `{searchState.keyword}`</p>
+                                    <span>( Search for regular contacts is case sensitive. )</span>
+                                </div>)
+                            }
                             <FavoriteList search={searchState} ids={favorites} onToggleFavorite={(contactId) => handleToggleFavorite(contactId)} />
                             <Separator><p>contacts</p></Separator>
                             <ContactList showSeparator={true}
