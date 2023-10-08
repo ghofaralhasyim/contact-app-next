@@ -3,7 +3,7 @@ This is a Contacts App based on [Next.js](https://nextjs.org/), bootstrapped wit
 
 ## Deployed on Vercel
 
-Check out Contacts App at [Contacts App Website](https://ghof-contacs-app.vercel.app) for live demo.
+Check out Contacts App at [Contacts App Website](https://ghof-contacts-app.vercel.app) for live demo.
 
 ## About Contacts App
 Main Features:
