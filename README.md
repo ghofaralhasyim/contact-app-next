@@ -12,12 +12,13 @@ Main Features:
 - **Create Contact** - Contact can be created after input **valid first name** and **valid last name** (only alphabet character) and **valid phone** number (only allow numeric with length 8 - 16 character).  It showing error message if you enter invalid data.
 - **Delete Contact** - By clicking dot icon on contact list (regular or favorite), it will popup menu delete. By clicking delete button, data will be removed form list and from API.
 - **Detail Contact** - By clicking contact list, it will redirect to detail page. Detail page showing information about contact and show multiple number phone (if contact have multiple number).
+- **Search Contact** - Search contact by first name or last name. Empty search input will reset search results.
 
 Page Performance (Tested using lighthouse)
 - Desktop
-    <img src="https://github.com/ghofaralhasyim/contact-app-next/blob/master/image-info/lighthouse-desktop.JPG" width=200>
+<img src="https://github.com/ghofaralhasyim/contact-app-next/blob/master/image-info/lighthouse-desktop.JPG" width=200>
 - Mobile
-    <img src="https://github.com/ghofaralhasyim/contact-app-next/blob/master/image-info/lighthouse-mobile.JPG" width=200>
+<img src="https://github.com/ghofaralhasyim/contact-app-next/blob/master/image-info/lighthouse-mobile.JPG" width=200>
 - It use @next/image & load with one file svg icon, for better performance.
 
 **still learning to create better app with React / NextJs.
