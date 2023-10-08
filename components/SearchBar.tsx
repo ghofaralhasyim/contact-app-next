@@ -39,6 +39,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, search }) => {
     
     const handleSearch = (event: FormEvent) => {
         event.preventDefault(); 
+        if(keyword.length === 0) return
         onSearch(keyword);
     }
 
