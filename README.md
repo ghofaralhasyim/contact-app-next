@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+This is a Contacts App based on [Next.js](https://nextjs.org/), bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-First, run the development server:
+## Deployed on Vercel
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Check out Contacts App at [Contacts App Website](https://ghof-contacs-app.vercel.app) for live demo.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## About Contacts App
+Main Features:
+- **Contact List** - It's provide contact list from Graphql API. Displaying first name, last name, and one phone number. Contact list only display favorites contact (if favorite list not empty) and followed by 10 regular contacts on the initial page load. Scroll element is used for **pagination** method, if scroll bar reach bottom element and   the API still contains contact data, the data will be displayed. **Regular contact can changed to favorite contact** by clicking star icon.
+- **Favorites List** - It stored using local storage browser. Data stored is only id contact, so if data contacts changed on API, data favorites will up to date (fetch by id for favorites). **Favorite contact can changed to regular contact** by clicking star icon.
+- **Create Contact** - Contact can be created after input **valid first name** and **valid last name** (only alphabet character) and **valid phone** number (only allow numeric with length 8 - 16 character).  It showing error message if you enter invalid data.
+- **Delete Contact** - By clicking dot icon on contact list (regular or favorite), it will popup menu delete. By clicking delete button, data will be removed form list and from API.
+- **Detail Contact** - By clicking contact list, it will redirect to detail page. Detail page showing information about contact and show multiple number phone (if contact have multiple number).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Page Performance (Tested using lighthouse)
+- Desktop
+    <img src="https://github.com/ghofaralhasyim/contact-app-next/blob/master/image-info/lighthouse-desktop.JPG" width=200>
+- Mobile
+    <img src="https://github.com/ghofaralhasyim/contact-app-next/blob/master/image-info/lighthouse-mobile.JPG" width=200>
+- It use @next/image & load with one file svg icon, for better performance.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**still learning to create better app with React / NextJs.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
