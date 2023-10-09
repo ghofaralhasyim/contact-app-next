@@ -13,6 +13,7 @@ const customJestConfig = {
   },
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/$1",
+    "\\.(graphql)$": "babel-jest",
   },
 };
 

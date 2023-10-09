@@ -28,6 +28,7 @@
     "@types/node": "latest",
     "@types/react": "^18.2.25",
     "babel-jest": "^29.7.0",
+    "babel-plugin-import-graphql": "^2.8.1",
     "eslint": "latest",
     "eslint-config-next": "latest",
     "install": "^0.13.0",

@@ -162,11 +162,7 @@ const AddContactForm: React.FC<AddContactFormProps> = ({onAddContact, closeModal
         if (validateData(formData)) return;
         try {
             const { data } = await add({
-                variables: {
-                    first_name: formData.first_name.toLocaleLowerCase(),
-                    last_name: formData.last_name.toLocaleLowerCase(),
-                    phones: formData.phones
-                },
+                variables: {formData}
             });
             onAddContact();
             closeModal();
