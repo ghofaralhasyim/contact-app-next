@@ -96,6 +96,9 @@ const DetailPage: React.FC = () => {
             <ContentWrapper>
                 <div className="wrapper">
                     <Container>
+                        { contact.phones.length == 0 && (
+                            <Separator><p>Phone number not found.</p></Separator>
+                        )}
                         <Profile>
                             {contact.phones.map((phone, index) => (
                                 <div key={index} className="numbers">
