@@ -93,7 +93,7 @@ const ContactList: React.FC<ContactListProps> = ({ contacts, isFavorite, onToggl
               </div>
               <div className="info">
                 <p>{contact.first_name + ' ' + contact.last_name}</p>
-                <p className="number">{ contact.phones[0].number }</p>
+                {contact.phones.length > 0 && <p className="number">{ contact.phones[0].number }</p>}
               </div>
              </div>
             </Link>
